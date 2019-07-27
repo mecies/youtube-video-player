@@ -5,7 +5,10 @@ import VideoList from './VideoList';
 
 class App extends React.Component {
 
-  state = { videos: [] }
+  state = { 
+    videos: [],
+    selectedVideo: null
+  }
 
   onSearchTermSubmit = async (searchTerm) => {
     //instance of axios v
@@ -18,11 +21,15 @@ class App extends React.Component {
     this.setState({ videos: response.data.items });
   };
 
+  onVideoSelect = (video) => {
+    this.setState({ selectedVideo: video });
+  }
+
   render() {
     return (
       <div className="ui container">
         <SearchBar onSearchTermSubmit={this.onSearchTermSubmit}/>
-        <VideoList videos={this.state.videos}/>
+        <VideoList videos={this.state.videos} onVideoSelect={this.onVideoSelect}/>
       </div>
     );
   }
