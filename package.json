@@ -2,7 +2,7 @@
   "name": "video-player",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://mecies.github.io/youtube-video-player",
+  "homepage": "https://mecies.github.io/youtube-video-player/",
   "dependencies": {
     "axios": "^0.18.1",
     "gh-pages": "^2.0.1",
@@ -14,9 +14,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
