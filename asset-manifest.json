@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/yt-video-player/static/css/main.960fb8c4.chunk.css",
+    "main.js": "/yt-video-player/static/js/main.9ec95746.chunk.js",
+    "main.js.map": "/yt-video-player/static/js/main.9ec95746.chunk.js.map",
+    "runtime~main.js": "/yt-video-player/static/js/runtime~main.8acafd7d.js",
+    "runtime~main.js.map": "/yt-video-player/static/js/runtime~main.8acafd7d.js.map",
+    "static/js/2.60637844.chunk.js": "/yt-video-player/static/js/2.60637844.chunk.js",
+    "static/js/2.60637844.chunk.js.map": "/yt-video-player/static/js/2.60637844.chunk.js.map",
+    "index.html": "/yt-video-player/index.html",
+    "precache-manifest.8e53fa1fe09508e69cabe832eb0e7b21.js": "/yt-video-player/precache-manifest.8e53fa1fe09508e69cabe832eb0e7b21.js",
+    "service-worker.js": "/yt-video-player/service-worker.js",
+    "static/css/main.960fb8c4.chunk.css.map": "/yt-video-player/static/css/main.960fb8c4.chunk.css.map"
+  }
+}
