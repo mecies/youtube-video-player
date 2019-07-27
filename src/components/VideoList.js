@@ -5,7 +5,7 @@ const VideoList = ({videos, onVideoSelect}) => {
     // destructured props ^
 
     const renderedList = videos.map((video)=>{
-        return <Video key ={video.id} video={video} onVideoSelect={onVideoSelect}/>
+        return <Video key={video.id.videoId} video={video} onVideoSelect={onVideoSelect}/>
     })
 
     return (
