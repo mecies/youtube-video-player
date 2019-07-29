@@ -1,5 +1,6 @@
 import React from 'react';
 import Video from './Video';
+import '../style/VideoList.css'
 
 const VideoList = ({videos, onVideoSelect}) => {
     // destructured props ^
@@ -9,7 +10,7 @@ const VideoList = ({videos, onVideoSelect}) => {
     })
 
     return (
-        <div className="video-list ui relaxed divided list">
+        <div className="video-list">
             {renderedList}
         </div>
     )

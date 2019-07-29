@@ -1,0 +1,6 @@
+.container {
+    display: grid;
+    justify-content: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 40px;
+}

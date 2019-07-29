@@ -1,0 +1,14 @@
+.video-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.video-container .video{
+    width: 80%;
+    height: 100%;
+}
+
+.video-container .video iframe{
+    width: 773px;
+    height: 435px;
+}

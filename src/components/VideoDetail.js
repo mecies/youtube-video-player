@@ -1,4 +1,5 @@
 import React from 'react';
+import '../style/VideoDetail.css';
 
 const VideoDetail = ({ video }) => {
 
@@ -9,12 +10,12 @@ const VideoDetail = ({ video }) => {
     const videoSrc = `https://youtube.com/embed/${video.id.videoId}`
 
     return (
-        <div>   
-            <div className="ui embed">
+        <div className="video-container">   
+            <div className="video">
                 <iframe src={videoSrc} title={video.snippet.title}></iframe>
             </div>
-            <div className="ui segment">
-                <h4 className="ui header">
+            <div className="video-desc">
+                <h4 className="header">
                     {video.snippet.title}
                 </h4>
                 <p>{video.snippet.description}</p>

@@ -1,0 +1,17 @@
+.search-bar {
+    display: flex;
+    justify-content: flex-start;   
+}
+
+.search-bar .form{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.search-bar .form input{
+    -webkit-appearance: none;
+    border-radius: 2px;
+    border: grey 1px solid;
+    margin-top: 5px;
+}
