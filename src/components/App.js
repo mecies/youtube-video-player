@@ -1,50 +1,40 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import youtube from '../APIs/youtube'
 import SearchBar from './SearchBar';
 import VideoList from './VideoList';
 import VideoDetail from './VideoDetail'
 import '../style/App.css'
 
-class App extends React.Component {
+const App = () => {
 
-  state = { 
-    videos: [],
-    selectedVideo: null
-  }
+  const [videos, setVideos] = useState([]);
+  const [selectedVideo, setSelectedVideo] = useState(null);
 
-  componentDidMount() {
-    this.onSearchTermSubmit('młody waka waka')
-  }
+  useEffect(() => {
+    onSearchTermSubmit('pozdrawiam cieplutko')
+  }, [])
 
-  onSearchTermSubmit = async (searchTerm) => {
-    //instance of axios v
-    const response = await youtube.get('/search', {
-      params: {
-        q: searchTerm
-      }
-    })
+  const onSearchTermSubmit = async (searchTerm) => {
+    const response = await youtube.get('/search', { params: { q: searchTerm } })
+    const videos = response.data.items
 
-    this.setState({ 
-      videos: response.data.items,
-      selectedVideo: response.data.items[0]
-     });
+    setVideos(videos)
+    setSelectedVideo(videos[0])
   };
 
-  onVideoSelect = (video) => {
-    this.setState({ selectedVideo: video });
+  const onVideoSelect = (video) => {
+    setSelectedVideo(video)
   }
 
-  render() {
-    return (
-      <div className="container">
-        <SearchBar onSearchTermSubmit={this.onSearchTermSubmit}/>
-        <main className="main">
-            <div className=""><VideoDetail video={this.state.selectedVideo} /></div>
-            <div className=""><VideoList videos={this.state.videos} onVideoSelect={this.onVideoSelect} /></div>
-        </main>
-      </div>
-    );
-  }
+  return (
+    <div className="container">
+      <SearchBar onSearchTermSubmit={onSearchTermSubmit} />
+      <main className="main">
+        <div className=""><VideoDetail video={selectedVideo} /></div>
+        <div className=""><VideoList videos={videos} onVideoSelect={onVideoSelect} /></div>
+      </main>
+    </div>
+  )
 }
 
-export default App;
+export default App
